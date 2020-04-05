@@ -1,0 +1,23 @@
+{
+    "id": "string",
+    "username": "string",
+    "password": "string",
+    "email": "string",
+    "userMetaData": {
+        "country": "string",
+        "state": "string",
+        "dateCreated": "date",
+        "firstName": "string",
+        "lastName": "string"
+    },
+    "playerMetaData": {
+        "player": true,
+        "commentator": false,
+        "teamOwner": false,
+        "onTeam": false,
+        "currentTeam": "string",
+        "mainGame": "string",
+        "secondaryGame": "string",
+        "tirtiaryGame": "string"
+    }
+}
