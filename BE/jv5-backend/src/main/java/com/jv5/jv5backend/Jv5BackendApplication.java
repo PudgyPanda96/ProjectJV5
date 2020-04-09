@@ -21,6 +21,7 @@ public class Jv5BackendApplication {
 		SpringApplication.run(Jv5BackendApplication.class, args);
 	}
 	
+	//http://localhost:8080/swagger-ui.html#/
 	@Bean
 	public Docket swaggerConfiguration() {
 		return new Docket(DocumentationType.SWAGGER_2)

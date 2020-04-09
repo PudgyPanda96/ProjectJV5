@@ -8,7 +8,7 @@ import lombok.Data;
 @Document(collection = "games")
 public class Game {
 	
-	@Field("id")
+	@Field("gameId")
 	private String gameId;
 	
 	@Field("gameTitle")
