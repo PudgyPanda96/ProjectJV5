@@ -4,7 +4,7 @@ var db = connect('localhost:27017/jv5')
 var data = [{
         "userId": "12345",
         "experiences": [{
-                "expId": "12345"
+                "expId": "12345",
                 "game": "melee",
                 "description": "beat axe",
                 "year": "2019",
@@ -65,4 +65,5 @@ var data = [{
             }
         ]
     }
-]
+];
+db.experience.insertMany(data);
