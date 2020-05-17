@@ -1,0 +1,18 @@
+{
+    "userId": "12345",
+    "experiences": [{
+            "expId": "1234",
+            "game": "melee",
+            "description": "beat axe",
+            "year": "2019",
+            "event": "super smash con"
+        },
+        {
+            "expId": "14525345",
+            "game": "valorant",
+            "description": "out fragged renard easily",
+            "year": "2020",
+            "event": "online"
+        }
+    ]
+}
