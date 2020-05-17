@@ -1,0 +1,16 @@
+Controller -> Service -> Repository
+
+controller:
+ - every controller function has a service counterpart
+models - objects
+repository:
+ - connection to the database
+ - queries
+ - function -> queries
+services:
+ - a service for every controller
+ - any core or complicated logic for the controller to go (sort, parsing)
+ 
+ 
+ Autowiring:
+ Controller <- Service <- Repository

@@ -47,24 +47,24 @@ public class UserController {
 	public List<User> getUsersByParams(
 			@RequestParam(required = false) String mainGame,
 			@RequestParam(required = false) String playsGame,
-			@RequestParam(required = false) boolean player,
-			@RequestParam(required = false) boolean commentator,
-			@RequestParam(required = false) boolean teamOwner,
-			@RequestParam(required = false) boolean onTeam,
+			@RequestParam(required = false) Boolean player,
+			@RequestParam(required = false) Boolean commentator,
+			@RequestParam(required = false) Boolean teamOwner,
+			@RequestParam(required = false) Boolean onTeam,
 			@RequestParam(required = false) String currentTeam) {
-		return null;
+		return userService.getUsersByParams(mainGame, playsGame, player, commentator, teamOwner, onTeam, currentTeam);
 	}
 	
 	@PostMapping("/create-new-user")
 	@ApiOperation("Add a new user to the database")
 	public User createNewUser(@RequestBody User user) {
-		return null;
+		return userService.createNewUser(user);
 	}
 	
 	@PostMapping("/create-list-of-users")
 	@ApiOperation("Create a list of users")
 	public List<User> createListOfUsers(@RequestBody List<User> users) {
-		return null;
+		return userService.createListOfUsers(users);
 	}
 	
 	@GetMapping("/verify-user")
@@ -72,20 +72,33 @@ public class UserController {
 	public User verifyUser(
 			@RequestParam(required = false) String username,
 			@RequestParam(required = false) String email,
-			@RequestParam String password) {
-		return null;
+			@RequestParam String password
+			) {
+		return userService.verifyUser(username, email, password);
 	}
 	
-	@PutMapping("/{userId}")
-	@ApiOperation("Edit a user in the database")
-	public User editUser(@RequestBody User user, @PathVariable("userId") String userId) {
-		return null;
+	@PutMapping("/update-username/{id}/{username}")
+	@ApiOperation("Update username")
+	public String updateUsername(@PathVariable String id, @PathVariable String username) {
+		return userService.updateUsername(id, username);
 	}
 	
-	@DeleteMapping("/delete-user/{userId}")
-	@ApiOperation("Delete a user from the database")
-	public User deleteUser(@PathVariable("userId") String userId) {
-		return null;
+	@PutMapping("/{update-password/{id}/{password}")
+	@ApiOperation("Update password")
+	public String updatePassword(@PathVariable String id, @PathVariable String password) {
+		return userService.updatePassword(id, password);
+	}
+	
+	@PutMapping("/{update-email/{id}/{email}")
+	@ApiOperation("Update email")
+	public String updateEmail(@PathVariable String id, @PathVariable String email) {
+		return userService.updateEmail(id, email);
+	}
+	
+	@DeleteMapping("/delete-user/{id}")
+	@ApiOperation("Delete User")
+	public User deleteUser(@PathVariable("id") String id) {
+		return userService.deleteUser(id);
 	}
 
 }

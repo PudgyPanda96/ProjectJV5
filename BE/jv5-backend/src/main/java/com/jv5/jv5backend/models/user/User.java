@@ -9,7 +9,6 @@ import lombok.Data;
 @Document(collection = "users")
 public class User {
 	
-	@Id
 	@Field("id")
 	private String id;
 	
