@@ -53,7 +53,7 @@ public class ExperienceController {
 		return experienceService.addNewExperience(userId, experiences);
 	}
 	
-	@PutMapping("/{update-experience/{userId}/experiences/experience")
+	@PutMapping("/update-experience/{userId}/experiences/experience")
 	@ApiOperation("Update experience")
 	public Experience updateExperience(@RequestParam String userId, @RequestBody Experience experience) {
 		return experienceService.updateExperience(userId, experience);
